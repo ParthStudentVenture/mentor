@@ -51,12 +51,12 @@ function Home() {
         We seek to connect you to your ideal mentor
       </h1>
       <div className="flex justify-center items-center">
-        <div className="w-2/4">
+        <div className="w-full md:w-2/4">
           <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 mt-12">
+      <div className="grid sm:grid-col-2 md:grid-cols-3 gap-2 mt-12">
         {filteredMentors.map((mentor, index) => (
           <Card mentor={mentor} key={index} />
         ))}
