@@ -20,7 +20,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const filePath = "/database.csv";
+      const filePath = "/psv/database.csv";
       const response = await fetch(filePath);
       const csvString = await response.text();
       const databaseData = (await csvtojson().fromString(
