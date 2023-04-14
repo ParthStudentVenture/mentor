@@ -40,18 +40,18 @@ function Home() {
         val.expertise.replace(/\s/g, "").toLowerCase().includes(searchText)
       );
       setFilteredMentors(newMentorList);
-    }else{
-      setFilteredMentors(allMentors)
+    } else {
+      setFilteredMentors(allMentors);
     }
   }, [searchTerm]);
 
   return (
-    <div className="Home mt-8">
+    <div className="Home mt-[8vh]">
       <h1 className="font-semibold text-xl mb-4">
         We seek to connect you to your ideal mentor
       </h1>
       <div className="flex justify-center items-center">
-        <div className="w-full md:w-2/4">
+        <div className="w-full md:w-2/4  mb-[8vh]">
           <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </div>
       </div>
