@@ -1,7 +1,9 @@
-import "./Home.css";
 import { useEffect, useState } from "react";
 import { Card, SearchForm } from "../components";
 import csvtojson from "csvtojson";
+
+import "./Home.css";
+import psvIcon from "../assets/psv_logo.png";
 
 export type mentor = {
   name: string;
@@ -47,12 +49,25 @@ function Home() {
 
   return (
     <div className="Home mt-[8vh]">
-      <h1 className="font-semibold text-xl mb-4">
-        We seek to connect you to your ideal mentor
-      </h1>
-      <div className="flex justify-center items-center">
-        <div className="w-full md:w-2/4  mb-[8vh]">
-          <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <div className="flex justify-center mb-[4rem]">
+        <img
+          className="h-[5rem] md:h-[8rem] cursor-pointer"
+          onClick={() => {
+            window.open("https://parthstudent.vc/", "_blank", "noreferrer");
+          }}
+          src={psvIcon}
+        />
+      </div>
+
+      <div>
+        <h1 className="font-semibold text-lg md:text-xl mb-6 whitespace-nowrap">
+          We seek to connect you to your ideal mentor
+        </h1>
+
+        <div className="flex justify-center items-center">
+          <div className="w-full md:w-2/4  mb-[8vh]">
+            <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          </div>
         </div>
       </div>
 
